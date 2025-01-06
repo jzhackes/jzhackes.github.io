@@ -506,34 +506,32 @@
     </div>
       
     <div class="overlay" id="overlay">
-      <span class="close" id="close">&times;</span>
       <img id="overlayImage" src="" alt="Expanded Image">
+      <div class="description" id="overlayDescription">kjkljlkjl</div>
     </div>
 
     <script>
       const gallery = document.querySelector('.gallery-image');
       const overlay = document.getElementById('overlay');
       const overlayImage = document.getElementById('overlayImage');
-      const closeBtn = document.getElementById('close');
+      const overlayDescription = document.getElementById('overlayDescription');
 
       gallery.addEventListener('click', (event) => {
         const imgBox = event.target.closest('.img-box');
         if (imgBox) {
           const img = imgBox.querySelector('img');
+          const description = imgBox.querySelector('.caption p').textContent;
           overlayImage.src = img.src;
+          overlayDescription.textContent = description;
           overlay.style.display = 'flex';
         }
-      });
-
-      closeBtn.addEventListener('click', () => {
-        overlay.style.display = 'none';
-        overlayImage.src = '';
       });
 
       overlay.addEventListener('click', (event) => {
         if (event.target === overlay) {
           overlay.style.display = 'none';
           overlayImage.src = '';
+          overlayCaption.textContent = '';
         }
       });
     </script>
