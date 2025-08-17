@@ -137,8 +137,8 @@ body {
   text-align: center;
 }
 .overlay img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 600;
+  max-height: 600;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   margin-bottom: 10px;
@@ -146,4 +146,5 @@ body {
 
 .overlay .description {
   font-size: 21px;
+  font-family: 'Montserrat', sans-serif;
 }
